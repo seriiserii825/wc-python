@@ -1,0 +1,2 @@
+def getUser():
+    print("user")
