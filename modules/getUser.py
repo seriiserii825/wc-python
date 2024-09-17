@@ -1,2 +1,5 @@
+import os
 def getUser():
-    print("user")
+    command = f"wp user list --field=name"
+    user = os.system(command)
+    return user

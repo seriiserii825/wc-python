@@ -1,2 +1,6 @@
+from modules.getUser import getUser
+
+
 def listProducts():
-    print('Listing products')
+    user = getUser()
+    print(f"user: {user}")
