@@ -1,17 +1,19 @@
 import os
-from modules.listItems import listItems
+from modules.attributes import attributes
+from modules.products import products
 def menu():
-    print("1. List")
-    print("2. Create")
+    print("1. Products")
+    print("2. Attributes")
     print("3. Edit")
     print("4. Delete")
     print("5. Exit")
     option = input("Choose an option: ")
     if option == "1":
-        listItems()
+        products()
         menu()
     elif option == "2":
-        print("Creating...")
+        attributes()
+        menu()
     elif option == "3":
         print("Editing...")
     elif option == "4":
