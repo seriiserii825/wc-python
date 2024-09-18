@@ -1,4 +1,5 @@
 from modules.createAttribute import createAttribute
+from modules.deleteAttribute import deleteAttribute
 from modules.showAttributes import showAttributes
 
 
@@ -16,7 +17,7 @@ def attributes():
     elif option == "3":
         print("Editing...")
     elif option == "4":
-        print("Deleting...")
+        deleteAttribute()
     elif option == "5":
         return
     else:
