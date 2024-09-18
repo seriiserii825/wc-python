@@ -18,12 +18,14 @@ def createAttribute():
         attribute_items = input("Enter the attribute items separated by comma: ")
         attribute_items = attribute_items.split(",")
         for item in attribute_items:
-            command = f"wp wc product_attribute_term create {parent_attribute_id} --user={user} --name={item}"
+            item = f"{item}"
+            command = f"wp wc product_attribute_term create {parent_attribute_id} --name={item} --user={user}"
             subprocess.run(command, shell=True)
     else:
         attribute_items = input("Enter the attribute items separated by comma: ")
         attribute_items = attribute_items.split(",")
         for item in attribute_items:
+            item = f"{item}"
             command = f"wp wc product_attribute create --name={item} --user={user}"
             subprocess.run(command, shell=True)
     showAttributes()
